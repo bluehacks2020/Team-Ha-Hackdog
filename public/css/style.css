@@ -1,0 +1,36 @@
+/* ======================================
+ * TABLE OF CONTENTS
+ * - NAVBAR
+ * ====================================== */
+
+/* ======================================
+ * NAVBAR
+ * ====================================== */
+.navbar-main {
+    background: #fff !important;
+}
+
+.navbar-main .nav-link-inner--text {
+    font-size: 12px !important;
+}
+
+.navbar-main a.nav-link {
+    padding: 0 !important;
+}
+
+.navbar-main .nav-link-inner--text {
+    color: #6B664D;
+}
+
+.navbar-categories .nav-link-inner--text {
+    color: #fff;
+}
+
+ul.list-categories {
+    background: #6B664D;
+}
+
+ul.list-categories li {
+    display: inline-block;
+    margin: 0 15px;
+}

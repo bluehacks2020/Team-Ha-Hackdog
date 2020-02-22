@@ -17,28 +17,39 @@
           <h3>Categories</h3>
           <ul class="list-categories">
             <li>
-              Health & Beauty
+              <a href="/sellers/{{ $seller->id }}?search=health" class="nav-link nav-link-icon">
+                Health
+              </a>
             </li>
             <li>
-              Babies & Toys
+              <a href="/sellers/{{ $seller->id }}?search=groceries" class="nav-link nav-link-icon">
+                Groceries
+              </a>
             </li>
             <li>
-              Groceries
+              <a href="/sellers/{{ $seller->id }}?search=lifestyle" class="nav-link nav-link-icon">
+                Lifestyle
+              </a>
             </li>
             <li>
-              Home & Living
+              <a href="/sellers/{{ $seller->id }}?search=fashion" class="nav-link nav-link-icon">
+                Fashion
+              </a>
             </li>
             <li>
-              Women's Fashion
+              <a href="/sellers/{{ $seller->id }}?search=accessories" class="nav-link nav-link-icon">
+                Accessories
+              </a>
             </li>
             <li>
-              Men's Fashion
+              <a href="/sellers/{{ $seller->id }}?search=handicraft" class="nav-link nav-link-icon">
+                Handicraft
+              </a>
             </li>
             <li>
-              Fashion Accessories
-            </li>
-            <li>
-              Sports & Lifestyle
+              <a href="/sellers/{{ $seller->id }}?search=sports" class="nav-link nav-link-icon">
+                Sports
+              </a>
             </li>
           </ul>
         </div>

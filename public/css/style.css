@@ -24,6 +24,11 @@
     color: #6b664d;
 }
 
+.navbar-categories {
+    top: 30px !important;
+    padding: 0;
+}
+
 .navbar-categories .nav-link-inner--text {
     color: #fff;
 }

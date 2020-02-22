@@ -171,3 +171,14 @@
 .checkout p {
     margin: 0;
 }
+
+.modal-body img {
+    width: 100px;
+    height: 100px;
+    float: left;
+    margin-right: 10px;
+}
+
+.modal-body p {
+    margin: 0;
+}

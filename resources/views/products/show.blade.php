@@ -1,6 +1,37 @@
 @extends('layouts.app')
 
 @section('content')
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Item added to cart</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div>
+          <p>1 item(s) in cart</p>
+        </div>
+        <div>
+          <img class="img-checkout " src="{{asset('img/products/bag.jpg')}}" alt="bag">
+          <p>Hand Woven Bag</p>
+          <p>Quantity: <span class="text-blue">1</span></p>
+          <p>Price: <span class="text-blue">Php 150.00</span></p>
+        </div>
+        <hr class="mb-0">
+        <p class="text-right font-weight-700 m-0">Subtotal: Php 150.00</p>
+      </div>
+      <div class="modal-footer">
+        <a href="/checkout" class="btn btn-default">View Cart</a>
+        <a href="/products" type="button" class="btn btn-default">Add Item</a>
+        <a href="/checkout" type="button" class="btn btn-danger">Checkout</a>
+      </div>
+    </div>
+  </div>
+</div>
 <div class="products-show">
     <div class="header py-7 py-lg-8">
         <div class="header-body">
@@ -45,7 +76,7 @@
                         <h5 class="custom-h5">by <span class="text-blue">{{ $product->seller->name }}</span></h5>
                         <h5 class="custom-h5">Price: <span>Php {{ $product->unit_price }}</span></h5>
                         <h5 class="custom-h5">Category: <span>Fashion</span></h5>
-                        <button type="button" class="btn btn-danger mb-3">Add to Cart</button>
+                        <button type="button" class="btn btn-danger mb-3" data-toggle="modal" data-target="#exampleModal">Add to Cart</button>
                         <a href="/checkout" type="button" class="btn btn-outline-info">Checkout</a>
                     </div>
                 </div>

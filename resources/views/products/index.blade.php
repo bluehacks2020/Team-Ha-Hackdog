@@ -71,7 +71,7 @@
                         <br>
                         <span class="text-sm">By {{ $product->seller->name }}</span>
                       </h3>
-                      <a href="#" class="btn btn-sm btn-outline-primary">
+                      <a href="#" class="add-to-cart-button btn btn-sm btn-outline-primary" data-var-id="{{ $product->id }}">
                         <i class="ni ni-cart"></i> Add to Cart
                       </a>
                       <a href="/products/{{ $product->id }}" class="btn btn-sm btn-outline-secondary">
@@ -99,4 +99,56 @@
     </div>
   </div>
 </div>
+<div class="modal fade" id="loader-modal">
+  <div class="modal-dialog modal- modal-dialog-centered modal-" role="document">
+    <div class="modal-content">
+      <div class="modal-body">
+        <div class="text-center">
+          <span class="fas fa-circle-notch fa-spin fa-2x fa-fw mt-2"></span>
+          <h3 class="my-2">Procession request...</h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 @endsection
+
+@push('js')
+  <script>
+    $(document).ready(function() {
+      $('body').on('click', '.add-to-cart-button', function() {
+        var thisElement = $(this);
+
+        $('#loader-modal').modal({
+          'backdrop': 'static',
+          'show': true
+        });
+
+        setTimeout(function() {
+          $.ajax({
+            url: '{{ route("pages.carts.add") }}',
+            headers: {
+              'X-CSRF-TOKEN': '{{ csrf_token() }}'
+            },
+            method: 'POST',
+            data: {
+              product_id: thisElement.attr('data-var-id')
+            },
+            dataType: 'json',
+            success: function(response) {
+              $('#loader-modal').modal('hide');
+
+              alert(response.message);
+            },
+            error: function(err) {
+              var win = window.open();
+              win.document.write(err.responseText);
+            }
+          });
+        }, 500);
+
+        return false;
+      });
+    });
+  </script>
+@endpush

@@ -67,9 +67,11 @@
                     <div class="card-body">
                       <span class="float-right text-md text-bold">PHP {{ $product->unit_price }}</span>
                       <h3 class="card-title">
-                        {{ $product->name }}
+                        <a href="/products/{{ $product->id }}" class="text-primary">
+                          {{ $product->name }}
+                        </a>
                         <br>
-                        <a href="/sellers/{{ $product->seller->id }}" class="text-sm">
+                        <a href="/sellers/{{ $product->seller->id }}" class="text-sm text-default">
                           By {{ $product->seller->name }}
                         </a>
                       </h3>

@@ -65,7 +65,9 @@
                     <div class="card-body">
                       <span class="float-right text-md text-bold">PHP {{ $product->unit_price }}</span>
                       <h3 class="card-title">
-                        {{ $product->name }}
+                        <a href="/products/{{ $product->id }}" class="text-primary">
+                          {{ $product->name }}
+                        </a>
                       </h3>
                       <a href="#" class="add-to-cart-button btn btn-sm btn-outline-primary" data-var-id="{{ $product->id }}">
                         <i class="ni ni-cart"></i> Add to Cart

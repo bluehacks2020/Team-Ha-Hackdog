@@ -17,6 +17,8 @@ class CreateOrdersTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('buyer_id');
             $table->foreign('buyer_id')->references('id')->on('buyers');
+            $table->unsignedBigInteger('logistic_id');
+            $table->foreign('logistic_id')->references('id')->on('logistics');
             $table->unsignedBigInteger('shipping_id');
             $table->foreign('shipping_id')->references('id')->on('addresses');
             $table->unsignedBigInteger('billing_id');

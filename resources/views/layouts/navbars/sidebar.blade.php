@@ -6,7 +6,7 @@
         </button>
         <!-- Brand -->
         <a class="navbar-brand pt-0" href="{{ route('home') }}">
-            <img src="{{ asset('argon') }}/img/brand/blue.png" class="navbar-brand-img" alt="...">
+            <img src="{{ asset('img/logo.png') }}" class="navbar-brand-img" alt="...">
         </a>
         <!-- User -->
         <ul class="nav align-items-center d-md-none">
@@ -67,7 +67,7 @@
             <!-- Navigation -->
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('home') }}">
+                    <a class="nav-link" href="{{ route('dashboard.index') }}">
                         <i class="fas fa-home fa-fw"></i> {{ __('Dashboard') }}
                     </a>
                 </li>
@@ -76,7 +76,22 @@
             <hr class="my-3">
             <ul class="navbar-nav">
                 @auth
-                    @if(auth()->user()->type === 'Seller')
+                    @if(auth()->user()->type === 'Logistic')
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#navbar-examples" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-examples">
+                                <i class="fas fa-box fa-fw"></i>
+                                <span class="nav-link-text">Orders</span>
+                            </a>
+
+                            <div class="collapse show" id="navbar-examples">
+                                <ul class="nav nav-sm flex-column">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Manage Orders</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                    @elseif(auth()->user()->type === 'Seller')
                         <li class="nav-item">
                             <a class="nav-link active" href="#navbar-examples" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-examples">
                                 <i class="fas fa-tachometer-alt fa-fw"></i>

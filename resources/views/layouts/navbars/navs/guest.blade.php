@@ -43,6 +43,11 @@
                         <span class="nav-link-inner--text">Login</span>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-link-icon" href="#" style="color: #6b664d">
+                        <i class="ni ni-cart"></i>
+                    </a>
+                </li>
             </ul>
         </div>
     </div>

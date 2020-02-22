@@ -23,6 +23,7 @@ class ProductsController extends Controller
             ->where(function($q) use ($search) {
                 $q->where('products.name', 'like', '%'.$search.'%')
                 ->orWhere('products.description', 'like', '%'.$search.'%')
+                ->orWhere('products.category', 'like', '%'.$search.'%')
                 ->orWhere('sellers.name', 'like', '%'.$search.'%');
             })
             ->paginate(9);

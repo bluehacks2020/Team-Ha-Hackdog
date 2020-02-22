@@ -57,33 +57,28 @@
     <div class="col-12 p-0">
         <ul class="list-categories text-center p-3 text-uppercase">
             <li class="nav-item">
-                <a class="nav-link nav-link-icon" href="#">
-                    <span class="nav-link-inner--text font-weight-700">Fashion</span>
+                <a class="nav-link nav-link-icon" href="/products?search=fashion">
+                    <span class="nav-link-inner--text">Fashion</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link nav-link-icon" href="#">
-                    <span class="nav-link-inner--text font-weight-700">Clothing</span>
+                <a class="nav-link nav-link-icon" href="/products?search=clothing">
+                    <span class="nav-link-inner--text">Clothing</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link nav-link-icon" href="#">
-                    <span class="nav-link-inner--text font-weight-700">Food & Beverages</span>
+                <a class="nav-link nav-link-icon" href="/products?search=food">
+                    <span class="nav-link-inner--text">Food</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link nav-link-icon" href="#">
-                    <span class="nav-link-inner--text font-weight-700">Health</span>
+                <a class="nav-link nav-link-icon" href="/products?search=health">
+                    <span class="nav-link-inner--text">Health</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link nav-link-icon" href="#">
-                    <span class="nav-link-inner--text font-weight-700">Lifestyle</span>
-                </a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link nav-link-icon" href="/products">
-                    <span class="nav-link-inner--text font-weight-700">All Products</span>
+                <a class="nav-link nav-link-icon" href="/products?search=lifestyle">
+                    <span class="nav-link-inner--text">Lifestyle</span>
                 </a>
             </li>
         </ul>

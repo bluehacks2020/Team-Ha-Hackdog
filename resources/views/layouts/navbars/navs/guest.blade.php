@@ -44,7 +44,7 @@
                     </a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link nav-link-icon" href="#" style="color: #6b664d">
+                    <a class="nav-link nav-link-icon" href="/checkout" style="color: #6b664d">
                         <i class="ni ni-cart"></i>
                     </a>
                 </li>

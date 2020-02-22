@@ -101,7 +101,7 @@
                             <div class="collapse show" id="navbar-examples">
                                 <ul class="nav nav-sm flex-column">
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#">Manage Existing Products</a>
+                                        <a class="nav-link" href="{{ route('dashboard.products') }}">Manage Existing Products</a>
                                     </li>
                                     <li class="nav-item">
                                         <a class="nav-link" href="#">Add New Products</a>

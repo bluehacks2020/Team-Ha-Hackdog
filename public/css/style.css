@@ -2,6 +2,7 @@
  * TABLE OF CONTENTS
  * - NAVBAR
  * - LANDING PAGE
+ * - PRODUCT PAGE
  * ====================================== */
 
 /* ======================================
@@ -27,11 +28,11 @@
     color: #fff;
 }
 
-ul.list-categories {
+.navbar-categories ul.list-categories {
     background: #6b664d;
 }
 
-ul.list-categories li {
+.navbar-categories ul.list-categories li {
     display: inline-block;
     margin: 0 15px;
 }
@@ -106,4 +107,16 @@ ul.list-categories li {
     cursor: pointer;
     border-top-right-radius: 25px;
     border-bottom-right-radius: 25px;
+}
+
+/* ======================================
+ * PRODUCT PAGE
+ * ====================================== */
+.container.products .list-categories {
+    padding-left: 0;
+}
+
+.container.products .list-categories li {
+    display: inline-block;
+    margin-top: 15px;
 }

@@ -12,16 +12,15 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+	return view('index');
 });
 
-Route::resource('products','ProductsController')->only(['index', 'show']);
+Route::resource('products', 'ProductsController')->only(['index', 'show']);
 
 Route::get('/home', 'DashboardController@test')->name('home');
 
 Auth::routes();
 
 Route::prefix('dashboard')->group(function () {
-  Route::get('/', 'DashboardController@index')->name('dashboard.index');
+	Route::get('/', 'DashboardController@index')->name('dashboard.index');
 });
-

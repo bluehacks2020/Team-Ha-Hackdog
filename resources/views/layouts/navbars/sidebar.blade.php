@@ -80,13 +80,16 @@
                         <li class="nav-item">
                             <a class="nav-link active" href="#navbar-examples" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-examples">
                                 <i class="fas fa-tachometer-alt fa-fw"></i>
-                                <span class="nav-link-text">{{ __('Laravel Examples') }}</span>
+                                <span class="nav-link-text">Products</span>
                             </a>
 
                             <div class="collapse show" id="navbar-examples">
                                 <ul class="nav nav-sm flex-column">
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#">asd</a>
+                                        <a class="nav-link" href="#">Manage Existing Products</a>
+                                    </li>
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="#">Add New Products</a>
                                     </li>
                                 </ul>
                             </div>

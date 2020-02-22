@@ -20,7 +20,7 @@ class CreateBuyersTable extends Migration
             $table->string('last_name');
             $table->date('birth_date');
             $table->string('sex');
-            $table->string('address');
+            $table->string('current_address');
             $table->timestamps();
         });
     }

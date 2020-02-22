@@ -7,12 +7,14 @@
             <div class="header-body text-center mt-7 mb-7">
                 <div class="row justify-content-center">
                     <div class="col-lg-8 col-md-8">
-                        <div class="input-group mb-3">
-                            <input type="text" class="form-control" placeholder="Looking for something...?" aria-label="Recipient's username" aria-describedby="basic-addon2">
-                            <div class="input-group-append">
-                                <button class="btn btn-outline-secondary" type="button"><i class="fas fa-search"></i></button>
+                        <form action="?" method="get">
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" placeholder="Looking for something...?" name="search">
+                                <div class="input-group-append">
+                                    <button class="btn btn-outline-secondary" type="submit"><i class="fas fa-search"></i></button>
+                                </div>
                             </div>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -27,9 +29,9 @@
             <div class="col-lg-6">
                 <h1>Experience the joy of
                     transforming a community</h1>
-                <p>Indigenous peoples are hard pressed to find more sources of income as they 
-                    remain among the poorest in the Philippines. 
-                    They are also faced with the possibility of losing their ancestral domain, 
+                <p>Indigenous peoples are hard pressed to find more sources of income as they
+                    remain among the poorest in the Philippines.
+                    They are also faced with the possibility of losing their ancestral domain,
                     while they suffer from lack of access to basic social services such as health and education.</p>
             </div>
         </div>
@@ -49,9 +51,9 @@
                     <div class="row">
                         <div class="col-lg-7">
                             <h3>Manobo Community</h3>
-                            <p>Indigenous peoples are hard pressed to find more sources of income as they 
-                                remain among the poorest in the Philippines. 
-                                They are also faced with the possibility of losing their ancestral domain, 
+                            <p>Indigenous peoples are hard pressed to find more sources of income as they
+                                remain among the poorest in the Philippines.
+                                They are also faced with the possibility of losing their ancestral domain,
                                 while they suffer from lack of access to basic social services such as health and education.</p>
                         </div>
                         <div class="col-lg-5">
@@ -63,9 +65,9 @@
                     <div class="row">
                         <div class="col-lg-7">
                             <h1>Mangyan Community</h1>
-                            <p>Indigenous peoples are hard pressed to find more sources of income as they 
-                                remain among the poorest in the Philippines. 
-                                They are also faced with the possibility of losing their ancestral domain, 
+                            <p>Indigenous peoples are hard pressed to find more sources of income as they
+                                remain among the poorest in the Philippines.
+                                They are also faced with the possibility of losing their ancestral domain,
                                 while they suffer from lack of access to basic social services such as health and education.</p>
                         </div>
                         <div class="col-lg-5">
@@ -77,9 +79,9 @@
                     <div class="row">
                         <div class="col-lg-7">
                             <h1>Aeta Community</h1>
-                            <p>Indigenous peoples are hard pressed to find more sources of income as they 
-                                remain among the poorest in the Philippines. 
-                                They are also faced with the possibility of losing their ancestral domain, 
+                            <p>Indigenous peoples are hard pressed to find more sources of income as they
+                                remain among the poorest in the Philippines.
+                                They are also faced with the possibility of losing their ancestral domain,
                                 while they suffer from lack of access to basic social services such as health and education.</p>
                         </div>
                         <div class="col-lg-5">

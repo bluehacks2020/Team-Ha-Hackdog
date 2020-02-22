@@ -37,12 +37,14 @@
         <div class="col-10">
           <div class="row">
             <div class="col-12">
-              <div class="input-group mb-3">
-                <input type="text" class="form-control" placeholder="Search by product name, location, or by brand">
-                <div class="input-group-append">
-                  <button class="btn btn-outline-primary" type="button">Search</button>
+              <form action="/products?" method="get">
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control"  placeholder="Search by product name, location, or by brand" name="search" value="<?= $search ?>">
+                    <div class="input-group-append">
+                      <button class="btn btn-outline-primary" type="submit">Search</button>
+                    </div>
                 </div>
-              </div>
+              </form>
             </div>
           </div>
           <div class="row">

@@ -47,65 +47,53 @@
               </form>
             </div>
           </div>
-          <div class="row">
-            <div class="col-4">
-              <div class="card" style="width: 100%;">
-                <img class="card-img-top" src="https://via.placeholder.com/300">
-                <div class="card-body">
-                  <span class="float-right text-md text-bold">PHP 200.00</span>
-                  <h3 class="card-title">
-                    Product Name
-                    <br>
-                    <span class="text-sm">By Bagobo Tribe</span>
-                  </h3>
-                  <a href="#" class="btn btn-sm btn-outline-primary">
-                    <i class="ni ni-cart"></i> Add to Cart
-                  </a>
-                  <a href="/products/1" class="btn btn-sm btn-outline-secondary">
-                    Learn More
-                  </a>
+          @if(count($products) > 0 || $search != null)
+
+            @if($search != null && count($products) == 0)
+                <div class="row mt-3 mb-5">
+                    <div class="col text-center">
+                        <p class="lead">Product not found</p>
+                    </div>
                 </div>
-              </div>
-            </div>
-            <div class="col-4">
-              <div class="card" style="width: 100%;">
-                <img class="card-img-top" src="https://via.placeholder.com/300">
-                <div class="card-body">
-                  <span class="float-right text-md text-bold">PHP 200.00</span>
-                  <h3 class="card-title">
-                    Product Name
-                    <br>
-                    <span class="text-sm">By Bagobo Tribe</span>
-                  </h3>
-                  <a href="#" class="btn btn-sm btn-outline-primary">
-                    <i class="ni ni-cart"></i> Add to Cart
-                  </a>
-                  <a href="/products/1" class="btn btn-sm btn-outline-secondary">
-                    Learn More
-                  </a>
+            @endif
+
+            @if(count($products) > 0)
+            <div class="row">
+
+              @foreach ($products as $product)
+                <div class="col-4">
+                  <div class="card" style="width: 100%;">
+                    <img class="card-img-top" src="https://via.placeholder.com/300">
+                    <div class="card-body">
+                      <span class="float-right text-md text-bold">PHP {{ $product->unit_price }}</span>
+                      <h3 class="card-title">
+                        {{ $product->name }}
+                        <br>
+                        <span class="text-sm">By {{ $product->seller->name }}</span>
+                      </h3>
+                      <a href="#" class="btn btn-sm btn-outline-primary">
+                        <i class="ni ni-cart"></i> Add to Cart
+                      </a>
+                      <a href="/products/{{ $product->id }}" class="btn btn-sm btn-outline-secondary">
+                        Learn More
+                      </a>
+                    </div>
+                  </div>
                 </div>
-              </div>
+              @endforeach
+
             </div>
-            <div class="col-4">
-              <div class="card" style="width: 100%;">
-                <img class="card-img-top" src="https://via.placeholder.com/300">
-                <div class="card-body">
-                  <span class="float-right text-md text-bold">PHP 200.00</span>
-                  <h3 class="card-title">
-                    Product Name
-                    <br>
-                    <span class="text-sm">By Bagobo Tribe</span>
-                  </h3>
-                  <a href="#" class="btn btn-sm btn-outline-primary">
-                    <i class="ni ni-cart"></i> Add to Cart
-                  </a>
-                  <a href="/products/1" class="btn btn-sm btn-outline-secondary">
-                    Learn More
-                  </a>
+            <div class="row">
+              {{ $products->links() }}
+            </div>
+            @endif
+          @else
+            <div class="row mt-3 mb-5">
+                <div class="col text-center">
+                    <p class="lead">Product not found</p>
                 </div>
-              </div>
             </div>
-          </div>
+          @endif
         </div>
       </div>
     </div>

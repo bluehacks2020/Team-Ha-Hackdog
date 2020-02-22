@@ -40,4 +40,5 @@ Route::group(['middleware' => 'auth', 'prefix' => 'dashboard'], function () {
 
   Route::post('products/save', 'DashboardController@postSaveProduct')->name('dashboard.products.save');
   Route::post('products/delete', 'DashboardController@postDeleteProduct')->name('dashboard.products.delete');
-
+  Route::post('orders/update_status', 'DashboardController@postUpdateOrderStatus')->name('dashboard.orders.update_status');
+});

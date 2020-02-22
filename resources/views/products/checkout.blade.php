@@ -21,7 +21,7 @@
                                                 <img class="img-checkout" src="{{ asset('storage/products/' . $cart_item->cover_image) }}">
                                                 <p>{{ $cart_item->name }}</p>
                                                 <p>Category: {{ $cart_item->category }}</p>
-                                                <button type="button" class="btn btn-outline-danger btn-sm">Remove</button>
+                                                <button type="button" class="delete-to-cart-button btn btn-outline-danger btn-sm" data-var-id="{{ $cart_item->id }}">Remove</button>
                                             </div>
                                             <div class="col-lg-2">
                                                 <p>Price</p>
@@ -69,6 +69,18 @@
                 </div>
             </div>
         </div>
+    </div>
+    <div class="modal fade" id="loader-modal">
+      <div class="modal-dialog modal- modal-dialog-centered modal-" role="document">
+        <div class="modal-content">
+          <div class="modal-body">
+            <div class="text-center">
+              <span class="fas fa-circle-notch fa-spin fa-2x fa-fw mt-2"></span>
+              <h3 class="my-2">Procession request...</h3>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 @endsection
 
@@ -126,6 +138,38 @@
                         }
                     });
                 }, 200);
+
+                return false;
+            });
+            $('body').on('click', '.delete-to-cart-button', function() {
+                var thisElement = $(this);
+
+                $('#loader-modal').modal({
+                    'backdrop': 'static',
+                    'show': true
+                });
+
+                setTimeout(function() {
+                    $.ajax({
+                        url: '{{ route("pages.carts.delete") }}',
+                        headers: {
+                            'X-CSRF-TOKEN': '{{ csrf_token() }}'
+                        },
+                        method: 'POST',
+                        data: {
+                            product_id: thisElement.attr('data-var-id')
+                        },
+                        dataType: 'json',
+                        success: function(response) {
+                            window.reload();
+                            $('#loader-modal').modal('hide');
+                        },
+                        error: function(err) {
+                            var win = window.open();
+                            win.document.write(err.responseText);
+                        }
+                    });
+                }, 500);
 
                 return false;
             });

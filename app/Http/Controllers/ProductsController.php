@@ -13,7 +13,8 @@ class ProductsController extends Controller
      */
     public function index()
     {
-        return view('products.index');
+        $search = request('search');
+        return view('products.index')->with('search', $search);
     }
 
     /**

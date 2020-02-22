@@ -18,10 +18,12 @@
                         <table class="table align-items-center table-flush">
                             <thead class="thead-light">
                                 <tr>
+                                    <th scope="col">Cover Image</th>
                                     <th scope="col">Product Name</th>
                                     <th scope="col">Description</th>
                                     <th scope="col">Unit Price</th>
                                     <th scope="col">In Stock</th>
+                                    <th scope="col">Category</th>
                                     <th scope="col">Actions</th>
                                 </tr>
                             </thead>
@@ -29,12 +31,16 @@
                                 @if($products->count() > 0)
                                     @foreach($products as $product)
                                         <tr>
+                                            <td class="text-center">
+                                                <img src="{{ url('storage/products/' . $product->cover_image) }}" style="height: 100px;">
+                                            </td>
                                             <td>{{ $product->name }}</td>
-                                            <td>{{ $product->description }}</td>
-                                            <td>{{ $product->unit_price }}</td>
+                                            <td style="white-space: pre-wrap;">{{ $product->description }}</td>
+                                            <td>Php {{ number_format($product->unit_price, 2) }}</td>
                                             <td>{{ $product->in_stock }}</td>
+                                            <td>{{ $product->category }}</td>
                                             <td>
-                                                <form action="{{ route('dashboard.products.delete') }}" method="POST">
+                                                <form action="{{ route('dashboard.products.delete') }}" method="POST" style="display: inline-block;">
                                                     @csrf
                                                     <input type="hidden" name="id" value="{{ $product->id }}">
                                                     <button type="submit" class="btn btn-danger btn-sm"><span class="fas fa-trash fa-fw"></span> Delete</button>

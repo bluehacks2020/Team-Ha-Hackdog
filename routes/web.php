@@ -23,4 +23,5 @@ Auth::routes();
 
 Route::group(['middleware' => 'auth', 'prefix' => 'dashboard'], function () {
 	Route::get('/', 'DashboardController@index')->name('dashboard.index');
+  Route::get('products', 'DashboardController@products')->name('dashboard.products');
 });

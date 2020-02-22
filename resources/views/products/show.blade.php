@@ -76,7 +76,7 @@
                         <h5 class="custom-h5">by <span class="text-blue">{{ $product->seller->name }}</span></h5>
                         <h5 class="custom-h5">Price: <span>Php {{ $product->unit_price }}</span></h5>
                         <h5 class="custom-h5">Category: <span>Fashion</span></h5>
-                        <button type="button" class="btn btn-danger mb-3" data-toggle="modal" data-target="#exampleModal">Add to Cart</button>
+                        <button type="button" class="btn btn-default mb-3" data-toggle="modal" data-target="#exampleModal">Add to Cart</button>
                         <a href="/checkout" type="button" class="btn btn-outline-info">Checkout</a>
                     </div>
                 </div>

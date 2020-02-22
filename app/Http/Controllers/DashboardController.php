@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use Auth;
+
 class DashboardController extends Controller
 {
     public function __construct()
@@ -18,7 +20,11 @@ class DashboardController extends Controller
 
     public function products()
     {
-        return view('dashboard.products');
+        $products = Auth::user()->asWhat->products();
+
+        return view('dashboard.products', [
+          'products' => $products
+        ]);
     }
     
     public function test()

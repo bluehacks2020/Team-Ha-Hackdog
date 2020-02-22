@@ -134,7 +134,38 @@ class PagesController extends Controller
         }
     }
 
-    public function postComputePayment()
+    public function postDeleteToCart(Request $request)
     {
+        $product_id = $request->input('product_id');
+
+        $is_removed = false;
+
+        $cart = session()->get('cart', []);
+
+        if(count($cart) > 0) {
+            foreach($cart as $index => $cart_item) {
+                if($cart[$index]['product_id'] === (int) $product_id) {
+                    unset($cart[$index]);
+
+                    $is_removed = true;
+
+                    break;
+                }
+            }
+        }
+
+        session()->put('cart', $cart);
+
+        if($is_removed) {
+            return response()->json([
+                'status' => 'ok',
+                'message' => 'Product has been removed to cart.'
+            ]);
+        } else {
+            return response()->json([
+                'status' => 'fail',
+                'message' => 'Failed to remove product to cart.'
+            ]);
+        }
     }
 }

@@ -104,7 +104,7 @@
                                         <a class="nav-link" href="{{ route('dashboard.products') }}">Manage Existing Products</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#">Add New Products</a>
+                                        <a class="nav-link" href="{{ route('dashboard.products.add') }}">Add New Products</a>
                                     </li>
                                 </ul>
                             </div>

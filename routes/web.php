@@ -15,6 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
+Route::resource('products','ProductsController')->only(['index', 'show']);
+
 Route::get('/home', 'DashboardController@test')->name('home');
 
 Auth::routes();

@@ -19,6 +19,7 @@ class CreateProductsTable extends Migration
             $table->foreign('seller_id')->references('id')->on('sellers');
             $table->string('name');
             $table->string('description');
+            $table->string('cover_image');
             $table->double('unit_price');
             $table->unsignedBigInteger('in_stock');
             $table->timestamps();

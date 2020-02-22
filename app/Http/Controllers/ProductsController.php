@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Product;
+
 use Illuminate\Http\Request;
 
 class ProductsController extends Controller
@@ -14,7 +16,17 @@ class ProductsController extends Controller
     public function index()
     {
         $search = request('search');
-        return view('products.index')->with('search', $search);
+
+        $products = Product::where(function($q) use ($search) {
+                $q->where('name', 'like', '%'.$search.'%')
+                ->orWhere('description', 'like', '%'.$search.'%');
+            })
+            ->paginate(15);
+        $products->appends(['search' => $search]);
+
+        return view('products.index')
+                ->with('search', $search)
+                ->with('products', $products);
     }
 
     /**

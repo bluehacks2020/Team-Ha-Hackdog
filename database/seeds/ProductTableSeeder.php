@@ -39,5 +39,113 @@ class ProductTableSeeder extends Seeder
         $product->in_stock = 33;
         $product->cover_image = 'bracelet.jpg';
         $product->save();
+
+        $product = new Product;
+        $product->seller_id = 1;
+        $product->name = 'Bag';
+        $product->description = 'lorem impsum 5';
+        $product->unit_price = 150.00;
+        $product->in_stock = 25;
+        $product->cover_image = 'bag.jpg';
+        $product->save();
+
+        $product = new Product;
+        $product->seller_id = 1;
+        $product->name = 'Fan';
+        $product->description = 'lorem impsum 15';
+        $product->unit_price = 50.00;
+        $product->in_stock = 125;
+        $product->cover_image = 'fan.jpg';
+        $product->save();
+
+        $product = new Product;
+        $product->seller_id = 1;
+        $product->name = 'Handicraft';
+        $product->description = 'lorem impsum 10';
+        $product->unit_price = 50.00;
+        $product->in_stock = 125;
+        $product->cover_image = 'handicraft.jpg';
+        $product->save();
+
+        $product = new Product;
+        $product->seller_id = 1;
+        $product->name = 'Chocolate';
+        $product->description = 'lorem impsum 10';
+        $product->unit_price = 50.00;
+        $product->in_stock = 125;
+        $product->cover_image = 'chocolates.jpg';
+        $product->save();
+
+        $product = new Product;
+        $product->seller_id = 1;
+        $product->name = 'Coffee';
+        $product->description = 'lorem impsum 10';
+        $product->unit_price = 50.00;
+        $product->in_stock = 125;
+        $product->cover_image = 'coffee.jpg';
+        $product->save();
+
+        $product = new Product;
+        $product->seller_id = 1;
+        $product->name = 'Cashew butter';
+        $product->description = 'lorem impsum 10';
+        $product->unit_price = 50.00;
+        $product->in_stock = 125;
+        $product->cover_image = 'cashew-butter.jpg';
+        $product->save();
+
+        $product = new Product;
+        $product->seller_id = 1;
+        $product->name = 'Hand Woven Fabric';
+        $product->description = 'lorem impsum 10';
+        $product->unit_price = 50.00;
+        $product->in_stock = 125;
+        $product->cover_image = 'handwoven-fabric.jpg';
+        $product->save();
+
+        $product = new Product;
+        $product->seller_id = 1;
+        $product->name = 'Picnic Basket';
+        $product->description = 'lorem impsum 10';
+        $product->unit_price = 500.00;
+        $product->in_stock = 20;
+        $product->cover_image = 'picnic basket.jpg';
+        $product->save();
+
+        $product = new Product;
+        $product->seller_id = 1;
+        $product->name = 'Pouch';
+        $product->description = 'lorem impsum 10';
+        $product->unit_price = 30.00;
+        $product->in_stock = 155;
+        $product->cover_image = 'pouch.jpg';
+        $product->save();
+
+        $product = new Product;
+        $product->seller_id = 1;
+        $product->name = 'School Bag';
+        $product->description = 'lorem impsum 17';
+        $product->unit_price = 250.00;
+        $product->in_stock = 45;
+        $product->cover_image = 'school-bag.jpg';
+        $product->save();
+
+        $product = new Product;
+        $product->seller_id = 1;
+        $product->name = 'Slippers';
+        $product->description = 'lorem impsum 8';
+        $product->unit_price = 50.00;
+        $product->in_stock = 133;
+        $product->cover_image = 'slippers.jpg';
+        $product->save();
+
+        $product = new Product;
+        $product->seller_id = 1;
+        $product->name = 'hat';
+        $product->description = 'lorem impsum 23';
+        $product->unit_price = 55.00;
+        $product->in_stock = 25;
+        $product->cover_image = 'hat.jpg';
+        $product->save();
     }
 }

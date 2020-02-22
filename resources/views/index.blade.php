@@ -21,8 +21,8 @@
                                 <p class="d-inline text-white font-weight-700">
                                     Trending :
                                 </p>
-                                <a href="/" class="text-white font-weight-700">Bags,</a>
-                                <a href="/" class="text-white font-weight-700">Chocolates</a>
+                                <a href="/products?search=bags" class="text-white font-weight-700">Bags,</a>
+                                <a href="/products?search=chocolates" class="text-white font-weight-700">Chocolates</a>
                             </div>
                         </form>
                     </div>

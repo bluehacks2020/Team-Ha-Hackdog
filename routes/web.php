@@ -13,13 +13,17 @@
 
 Route::get('/', 'PagesController@index');
 
-Route::get('/checkout', function () {
-  return view('products.checkout');
-});
+Route::get('/checkout', 'PagesController@checkout');
+
+Route::post('super_carts', 'PagesController@postCarts')->name('pages.carts');
+Route::post('super_carts/add', 'PagesController@postAddToCart')->name('pages.carts.add');
+Route::post('super_carts/update', 'PagesController@postUpdateCart')->name('pages.carts.update');
 
 Route::get('/payment', function () {
   return view('products.payment');
 });
+
+Route::post('/payment');
 
 Route::get('/checkout-payment', function () {
   return view('products.checkout-payment');

@@ -19,6 +19,7 @@ class UserSeeder extends Seeder
     {
         $user_logistic = new User;
 
+        $user_logistic->id = 1;
         $user_logistic->email = 'logistic.asiong@katubo.com';
         $user_logistic->email_verified_at = now();
         $user_logistic->password = Hash::make('logistic123');
@@ -42,6 +43,7 @@ class UserSeeder extends Seeder
 
         $user_seller = new User;
 
+        $user_seller->id = 2;
         $user_seller->email = 'seller.ilocandia@katubo.com';
         $user_seller->email_verified_at = now();
         $user_seller->password = Hash::make('seller123');
@@ -59,6 +61,7 @@ class UserSeeder extends Seeder
 
         $user_buyer = new User;
 
+        $user_buyer->id = 3;
         $user_buyer->email = 'buyer.aetak@katubo.com';
         $user_buyer->email_verified_at = now();
         $user_buyer->password = Hash::make('buyer123');

@@ -6,5 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Seller extends Model
 {
-    //
+    public function displayName()
+    {
+        return $this->name;
+    }
 }

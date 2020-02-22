@@ -37,12 +37,21 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
     ];
 
-    public function fullName()
+    public function asWhat()
     {
-        if($this->middle_name !== null) {
-            return $this->first_name . ' ' . substr($this->middle_name, 0, 1) . '. ' . $this->last_name;
-        }
+        switch($this->type) {
+            case 'Buyer':
+                return $this->hasOne('App\Buyer', 'user_id', 'id');
 
-        return $this->first_name . ' ' . $this->last_name;
+                break;
+            case 'Logistic':
+                return $this->hasOne('App\Logistic', 'user_id', 'id');
+
+                break;
+            case 'Seller':
+                return $this->hasOne('App\Seller', 'user_id', 'id');
+
+                break;
+        }
     }
 }

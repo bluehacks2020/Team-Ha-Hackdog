@@ -41,8 +41,9 @@
                 <div class="input-group mb-3">
                     <input type="text" class="form-control"  placeholder="Search by product name, location, or by brand" name="search" value="<?= $search ?>">
                     <div class="input-group-append">
-                      <button class="btn btn-outline-primary" type="submit">Search</button>
+                      <button class="btn btn-primary" type="submit">Search</button>
                     </div>
+                    <a href="/products" class="btn btn-outline-primary ml-3" type="submit">Clear</a>
                 </div>
               </form>
             </div>

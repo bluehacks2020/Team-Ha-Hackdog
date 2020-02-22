@@ -27,9 +27,10 @@ class SellersController extends Controller
                 ->where('sellers.name', $seller->name)
                 ->where(function($q) use ($search) {
                     $q->where('products.name', 'like', '%'.$search.'%')
-                    ->orWhere('products.description', 'like', '%'.$search.'%');
+                    ->orWhere('products.description', 'like', '%'.$search.'%')
+                    ->orWhere('products.category', 'like', '%'.$search.'%');
                 })
-                ->paginate(9, array('products.id', 'products.name', 'products.cover_image', 'products.description', 'products.unit_price'));
+                ->paginate(9, array('products.id', 'products.name', 'products.cover_image', 'products.description', 'products.unit_price', 'products.category'));
             $products->appends(['search' => $search]);
         } else {
             $products = Product::where('seller_id', $id)->paginate(9);

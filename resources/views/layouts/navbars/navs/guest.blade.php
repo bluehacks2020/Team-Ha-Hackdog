@@ -67,13 +67,13 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link nav-link-icon" href="/products?search=food">
-                    <span class="nav-link-inner--text">Food</span>
+                <a class="nav-link nav-link-icon" href="/products">
+                    <span class="nav-link-inner--text">All Products</span>
                 </a>
             </li>
             <li class="nav-item">
-                <a class="nav-link nav-link-icon" href="/products?search=health">
-                    <span class="nav-link-inner--text">Health</span>
+                <a class="nav-link nav-link-icon" href="/products?search=food">
+                    <span class="nav-link-inner--text">Food</span>
                 </a>
             </li>
             <li class="nav-item">

@@ -47,7 +47,7 @@
         </div>
     </div>
 </nav>
-<nav class="navbar navbar-top navbar-horizontal navbar-expand-md navbar-dark mt-3 navbar-categories">
+<nav class="navbar navbar-top navbar-horizontal navbar-expand-md navbar-dark navbar-categories">
     <div class="col-12 p-0">
         <ul class="list-categories text-center p-3 text-uppercase">
             <li class="nav-item">

@@ -41,6 +41,10 @@
     display: inline-block;
     margin: 0 15px;
 }
+.navbar ul li a:hover {
+    opacity: 0.7;
+    transition: all 0.4s;
+}
 
 /* ======================================
  * LANDING PAGE
@@ -48,8 +52,8 @@
 .homepage .header {
     background: linear-gradient(
             0deg,
-            rgba(28, 28, 28, 0.3),
-            rgba(28, 28, 28, 0.3)
+            rgba(28, 28, 28, 0.4),
+            rgba(28, 28, 28, 0.4)
         ),
         url("../img/bg/indigenous_1.jpg");
     background-repeat: no-repeat;
@@ -59,8 +63,8 @@
 .homepage .container-fluid {
     background: linear-gradient(
             0deg,
-            rgba(28, 28, 28, 0.3),
-            rgba(28, 28, 28, 0.3)
+            rgba(28, 28, 28, 0.4),
+            rgba(28, 28, 28, 0.4)
         ),
         url("../img/bg/indigenous_1.jpg");
     background-repeat: no-repeat;

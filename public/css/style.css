@@ -118,6 +118,18 @@
     border-bottom-right-radius: 25px;
 }
 
+.carousel-indicators li {
+    position: relative;
+    bottom: -90px;
+    background: #6a8276;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+}
+
+.carousel-indicators li.active {
+    background: rgb(252, 49, 49);
+}
 /* ======================================
  * PRODUCT PAGE
  * ====================================== */

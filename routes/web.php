@@ -14,11 +14,15 @@
 Route::get('/', 'PagesController@index');
 
 Route::get('/checkout', function () {
-	return view('products.checkout');
+  return view('products.checkout');
 });
 
 Route::get('/payment', function () {
-	return view('products.payment');
+  return view('products.payment');
+});
+
+Route::get('/checkout-payment', function () {
+  return view('products.checkout-payment');
 });
 
 Route::resource('products', 'ProductsController')->only(['index', 'show']);
@@ -28,7 +32,7 @@ Route::get('/home', 'DashboardController@test')->name('home');
 Auth::routes();
 
 Route::group(['middleware' => 'auth', 'prefix' => 'dashboard'], function () {
-	Route::get('/', 'DashboardController@index')->name('dashboard.index');
+  Route::get('/', 'DashboardController@index')->name('dashboard.index');
   Route::get('products', 'DashboardController@products')->name('dashboard.products');
   Route::get('products/add', 'DashboardController@addProduct')->name('dashboard.products.add');
 

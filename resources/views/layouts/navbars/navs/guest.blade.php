@@ -48,6 +48,7 @@
                         <i class="ni ni-cart"></i>
                     </a>
                 </li>
+                
             </ul>
         </div>
     </div>
@@ -57,27 +58,32 @@
         <ul class="list-categories text-center p-3 text-uppercase">
             <li class="nav-item">
                 <a class="nav-link nav-link-icon" href="#">
-                    <span class="nav-link-inner--text">Fashion</span>
+                    <span class="nav-link-inner--text font-weight-700">Fashion</span>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link nav-link-icon" href="#">
-                    <span class="nav-link-inner--text">Clothing</span>
+                    <span class="nav-link-inner--text font-weight-700">Clothing</span>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link nav-link-icon" href="#">
-                    <span class="nav-link-inner--text">Food & Beverages</span>
+                    <span class="nav-link-inner--text font-weight-700">Food & Beverages</span>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link nav-link-icon" href="#">
-                    <span class="nav-link-inner--text">Health</span>
+                    <span class="nav-link-inner--text font-weight-700">Health</span>
                 </a>
             </li>
             <li class="nav-item">
                 <a class="nav-link nav-link-icon" href="#">
-                    <span class="nav-link-inner--text">Lifestyle</span>
+                    <span class="nav-link-inner--text font-weight-700">Lifestyle</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link nav-link-icon" href="/products">
+                    <span class="nav-link-inner--text font-weight-700">All Products</span>
                 </a>
             </li>
         </ul>

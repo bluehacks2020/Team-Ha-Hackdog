@@ -63,7 +63,7 @@
               @foreach ($products as $product)
                 <div class="col-4">
                   <div class="card" style="width: 100%;">
-                    <img class="card-img-top" src="https://via.placeholder.com/300">
+                    <img class="card-img-top" src="{{ asset('storage/products/' . $product->cover_image) }}" style="height: 200px">
                     <div class="card-body">
                       <span class="float-right text-md text-bold">PHP {{ $product->unit_price }}</span>
                       <h3 class="card-title">
@@ -83,7 +83,7 @@
               @endforeach
 
             </div>
-            <div class="row">
+            <div class="row mt-2">
               {{ $products->links() }}
             </div>
             @endif

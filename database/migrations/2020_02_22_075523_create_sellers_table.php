@@ -22,6 +22,7 @@ class CreateSellersTable extends Migration
             $table->unsignedBigInteger('logistic_id');
             $table->foreign('logistic_id')->references('id')->on('logistics');
             $table->string('name');
+            $table->string('address');
             $table->timestamps();
         });
     }

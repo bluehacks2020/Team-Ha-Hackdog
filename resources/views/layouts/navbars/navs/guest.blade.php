@@ -33,7 +33,48 @@
                         <span class="nav-link-inner--text">Be a Partner</span>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-link-icon" href="#">
+                        <span class="nav-link-inner--text">Help</span>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-link-icon" href="{{ route('login') }}">
+                        <span class="nav-link-inner--text">Login</span>
+                    </a>
+                </li>
             </ul>
         </div>
+    </div>
+</nav>
+<nav class="navbar navbar-top navbar-horizontal navbar-expand-md navbar-dark mt-3 navbar-categories">
+    <div class="col-12 p-0">
+        <ul class="list-categories text-center p-3 text-uppercase">
+            <li class="nav-item">
+                <a class="nav-link nav-link-icon" href="#">
+                    <span class="nav-link-inner--text">Fashion</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link nav-link-icon" href="#">
+                    <span class="nav-link-inner--text">Clothing</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link nav-link-icon" href="#">
+                    <span class="nav-link-inner--text">Food & Beverages</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link nav-link-icon" href="#">
+                    <span class="nav-link-inner--text">Health</span>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link nav-link-icon" href="#">
+                    <span class="nav-link-inner--text">Lifestyle</span>
+                </a>
+            </li>
+        </ul>
     </div>
 </nav>

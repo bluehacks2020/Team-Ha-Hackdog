@@ -1,6 +1,7 @@
 /* ======================================
  * TABLE OF CONTENTS
  * - NAVBAR
+ * - LANDING PAGE
  * ====================================== */
 
 /* ======================================
@@ -19,7 +20,7 @@
 }
 
 .navbar-main .nav-link-inner--text {
-    color: #6B664D;
+    color: #6b664d;
 }
 
 .navbar-categories .nav-link-inner--text {
@@ -27,10 +28,82 @@
 }
 
 ul.list-categories {
-    background: #6B664D;
+    background: #6b664d;
 }
 
 ul.list-categories li {
     display: inline-block;
     margin: 0 15px;
+}
+
+/* ======================================
+ * LANDING PAGE
+ * ====================================== */
+.homepage .header {
+    background: linear-gradient(
+            0deg,
+            rgba(28, 28, 28, 0.5),
+            rgba(28, 28, 28, 0.5)
+        ),
+        url("../img/bg/indigenous_1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.homepage .container-fluid {
+    background: linear-gradient(
+            0deg,
+            rgba(28, 28, 28, 0.3),
+            rgba(28, 28, 28, 0.3)
+        ),
+        url("../img/bg/indigenous_1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 200px 0;
+}
+
+.homepage #carouselExampleIndicators {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.homepage .custom-h1 {
+    font-size: 2rem;
+}
+
+.homepage .img-responsive {
+    width: 100%;
+    height: 100%;
+}
+
+.homepage .img-card {
+    height: 100px;
+}
+.homepage .search-box {
+    display: flex;
+    width: 707px;
+}
+
+.homepage .input-group .form-control {
+    padding: 28px 30px;
+    font-size: 17px;
+    float: left;
+    width: 90%;
+    box-sizing: border-box;
+    border-right: none;
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    outline: none;
+}
+
+.homepage button.btn {
+    float: left;
+    background: #fff;
+    color: #000;
+    font-size: 17px;
+    border-left: none;
+    /* Prevent double borders */
+    cursor: pointer;
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
 }

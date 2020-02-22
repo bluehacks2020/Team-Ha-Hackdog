@@ -43,11 +43,16 @@
                         <span class="nav-link-inner--text">Login</span>
                     </a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-link-icon" href="#" style="color: #6b664d">
+                        <i class="ni ni-cart"></i>
+                    </a>
+                </li>
             </ul>
         </div>
     </div>
 </nav>
-<nav class="navbar navbar-top navbar-horizontal navbar-expand-md navbar-dark mt-3 navbar-categories">
+<nav class="navbar navbar-top navbar-horizontal navbar-expand-md navbar-dark navbar-categories">
     <div class="col-12 p-0">
         <ul class="list-categories text-center p-3 text-uppercase">
             <li class="nav-item">

@@ -24,12 +24,17 @@
     color: #6b664d;
 }
 
+.navbar-categories {
+    top: 30px !important;
+    padding: 0;
+}
+
 .navbar-categories .nav-link-inner--text {
     color: #fff;
 }
 
 .navbar-categories ul.list-categories {
-    background: #6b664d;
+    background: #6a8276;
 }
 
 .navbar-categories ul.list-categories li {
@@ -43,8 +48,8 @@
 .homepage .header {
     background: linear-gradient(
             0deg,
-            rgba(28, 28, 28, 0.5),
-            rgba(28, 28, 28, 0.5)
+            rgba(28, 28, 28, 0.3),
+            rgba(28, 28, 28, 0.3)
         ),
         url("../img/bg/indigenous_1.jpg");
     background-repeat: no-repeat;

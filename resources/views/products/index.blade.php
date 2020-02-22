@@ -69,7 +69,7 @@
                       <h3 class="card-title">
                         {{ $product->name }}
                         <br>
-                        <span class="text-sm">By --</span>
+                        <span class="text-sm">By {{ $product->seller->name }}</span>
                       </h3>
                       <a href="#" class="btn btn-sm btn-outline-primary">
                         <i class="ni ni-cart"></i> Add to Cart

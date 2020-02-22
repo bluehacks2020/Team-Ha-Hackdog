@@ -17,12 +17,22 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        Logistic::insert([
-            [
-                'name' => 'Asiong',
-                'address' => 'Tondo, Manila'
-            ]
-        ]);
+        $user_logistic = new User;
+
+        $user_logistic->email = 'logistic.asiong@katubo.com';
+        $user_logistic->email_verified_at = now();
+        $user_logistic->password = Hash::make('logistic123');
+        $user_logistic->type = 'Logistic';
+
+        if($user_logistic->save()) {
+            Logistic::insert([
+                [
+                    'user_id' => $user_logistic->id,
+                    'name' => 'Asiong',
+                    'address' => 'Tondo, Manila'
+                ]
+            ]);
+        }
 
         Lumad::insert([
             [

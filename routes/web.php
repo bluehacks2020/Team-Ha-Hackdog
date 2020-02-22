@@ -11,10 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-	return view('index');
-});
-
+Route::get('/', 'PagesController@index');
 Route::resource('products', 'ProductsController')->only(['index', 'show']);
 
 Route::get('/home', 'DashboardController@test')->name('home');

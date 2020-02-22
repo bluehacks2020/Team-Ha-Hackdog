@@ -15,6 +15,12 @@ class CreateProductsTable extends Migration
     {
         Schema::create('products', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->unsignedBigInteger('seller_id');
+            $table->foreign('seller_id')->references('id')->on('sellers');
+            $table->string('name');
+            $table->string('description');
+            $table->double('unit_price');
+            $table->unsignedBigInteger('in_stock');
             $table->timestamps();
         });
     }

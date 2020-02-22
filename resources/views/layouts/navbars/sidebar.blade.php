@@ -75,7 +75,7 @@
             <!-- Divider -->
             <hr class="my-3">
             <ul class="navbar-nav">
-                @auth
+                @auth()
                     @if(auth()->user()->type === 'Logistic')
                         <li class="nav-item">
                             <a class="nav-link active" href="#navbar-examples" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-examples">

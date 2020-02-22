@@ -80,4 +80,25 @@ class DashboardController extends Controller
 
         return redirect()->back();
     }
+
+    public function postDeleteProduct(Request $request)
+    {
+        $id = $request->input('id');
+
+        $product = Product::where('id', $id)->delete();
+
+        if($product !== null) {
+            session()->flash('flash', [
+                'status' => 'ok',
+                'message' => 'Product has been successfully deleted.'
+            ]);
+        } else {
+            session()->flash('flash', [
+                'status' => 'fail',
+                'message' => 'Failed to delete product.'
+            ]);
+        }
+
+        return redirect()->back();
+    }
 }

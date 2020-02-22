@@ -33,4 +33,5 @@ Route::group(['middleware' => 'auth', 'prefix' => 'dashboard'], function () {
   Route::get('products/add', 'DashboardController@addProduct')->name('dashboard.products.add');
 
   Route::post('products/save', 'DashboardController@postSaveProduct')->name('dashboard.products.save');
+  Route::post('products/delete', 'DashboardController@postDeleteProduct')->name('dashboard.products.delete');
 });

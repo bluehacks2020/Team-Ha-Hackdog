@@ -22,6 +22,7 @@
                                     <th scope="col">Description</th>
                                     <th scope="col">Unit Price</th>
                                     <th scope="col">In Stock</th>
+                                    <th scope="col">Actions</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -32,6 +33,13 @@
                                             <td>{{ $product->description }}</td>
                                             <td>{{ $product->unit_price }}</td>
                                             <td>{{ $product->in_stock }}</td>
+                                            <td>
+                                                <form action="{{ route('dashboard.products.delete') }}" method="POST">
+                                                    @csrf
+                                                    <input type="hidden" name="id" value="{{ $product->id }}">
+                                                    <button type="submit" class="btn btn-danger btn-sm"><span class="fas fa-trash fa-fw"></span> Delete</button>
+                                                </form>
+                                            </td>
                                         </tr>
                                     @endforeach
                                 @else

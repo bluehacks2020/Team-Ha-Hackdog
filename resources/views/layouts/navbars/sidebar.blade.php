@@ -86,7 +86,21 @@
                             <div class="collapse show" id="navbar-examples">
                                 <ul class="nav nav-sm flex-column">
                                     <li class="nav-item">
-                                        <a class="nav-link" href="#">Manage Orders</a>
+                                        <a class="nav-link" href="{{ route('dashboard.orders') }}">Manage Orders</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#navbar-examples" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-examples">
+                                <i class="fas fa-box fa-fw"></i>
+                                <span class="nav-link-text">Sellers</span>
+                            </a>
+
+                            <div class="collapse show" id="navbar-examples">
+                                <ul class="nav nav-sm flex-column">
+                                    <li class="nav-item">
+                                        <a class="nav-link" href="{{ route('dashboard.sellers') }}">View Sellers</a>
                                     </li>
                                 </ul>
                             </div>
@@ -94,7 +108,7 @@
                     @elseif(auth()->user()->type === 'Seller')
                         <li class="nav-item">
                             <a class="nav-link active" href="#navbar-examples" data-toggle="collapse" role="button" aria-expanded="true" aria-controls="navbar-examples">
-                                <i class="fas fa-tachometer-alt fa-fw"></i>
+                                <i class="fas fa-shopping-basket fa-fw"></i>
                                 <span class="nav-link-text">Products</span>
                             </a>
 

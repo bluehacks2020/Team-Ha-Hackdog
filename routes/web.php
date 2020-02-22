@@ -30,6 +30,7 @@ Route::get('/checkout-payment', function () {
 });
 
 Route::resource('products', 'ProductsController')->only(['index', 'show']);
+Route::resource('sellers', 'SellersController')->only(['show']);
 
 Route::get('/home', 'DashboardController@test')->name('home');
 

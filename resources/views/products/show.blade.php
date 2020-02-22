@@ -73,7 +73,11 @@
                 <div class="col-lg-4">
                     <div class="card shadow p-4 card-fixed-right mr-4">
                         <h3 class="custom-h3">{{ $product->name }}</h3>
-                        <h5 class="custom-h5">by <span class="text-blue">{{ $product->seller->name }}</span></h5>
+                        <h5 class="custom-h5">
+                          <a href="/sellers/{{ $product->seller->id }}" class="text-sm">
+                            By {{ $product->seller->name }}
+                          </a>
+                        </h5>
                         <h5 class="custom-h5">Price: <span>Php {{ $product->unit_price }}</span></h5>
                         <h5 class="custom-h5">Category: <span>{{ $product->category }}</span></h5>
                         <button type="button" class="btn btn-default mb-3" data-toggle="modal" data-target="#exampleModal">Add to Cart</button>

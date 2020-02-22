@@ -5,6 +5,14 @@
   <div class="container products">
     <div class="header-body mt-5 mb-7">
       <div class="row">
+        <div class="col-6 offset-3">
+          <h1 class="text-center display-1">{{ $seller->name }}</h1>
+          <p class="text-center">
+            The {{ $seller->name }} constitute one of the largest groups among the indigenous peoples of southern Mindanao.
+          </p>
+        </div>
+      </div>
+      <div class="row mt-3">
         <div class="col-2">
           <h3>Categories</h3>
           <ul class="list-categories">
@@ -47,17 +55,7 @@
               </form>
             </div>
           </div>
-          @if(count($products) > 0 || $search != null)
-
-            @if($search != null && count($products) == 0)
-                <div class="row mt-3 mb-5">
-                    <div class="col text-center">
-                        <p class="lead">Product not found</p>
-                    </div>
-                </div>
-            @endif
-
-            @if(count($products) > 0)
+          @if(count($products) > 0)
             <div class="row">
 
               @foreach ($products as $product)
@@ -68,10 +66,6 @@
                       <span class="float-right text-md text-bold">PHP {{ $product->unit_price }}</span>
                       <h3 class="card-title">
                         {{ $product->name }}
-                        <br>
-                        <a href="/sellers/{{ $product->seller->id }}" class="text-sm">
-                          By {{ $product->seller->name }}
-                        </a>
                       </h3>
                       <a href="#" class="add-to-cart-button btn btn-sm btn-outline-primary" data-var-id="{{ $product->id }}">
                         <i class="ni ni-cart"></i> Add to Cart
@@ -88,11 +82,10 @@
             <div class="row mt-2">
               {{ $products->links() }}
             </div>
-            @endif
           @else
             <div class="row mt-3 mb-5">
                 <div class="col text-center">
-                    <p class="lead">Product not found</p>
+                    <p class="lead">No Products not found</p>
                 </div>
             </div>
           @endif

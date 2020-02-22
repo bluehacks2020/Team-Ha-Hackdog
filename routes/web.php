@@ -29,9 +29,9 @@ Auth::routes();
 
 Route::group(['middleware' => 'auth', 'prefix' => 'dashboard'], function () {
 	Route::get('/', 'DashboardController@index')->name('dashboard.index');
-
   Route::get('products', 'DashboardController@products')->name('dashboard.products');
   Route::get('products/add', 'DashboardController@addProduct')->name('dashboard.products.add');
 
   Route::post('products/save', 'DashboardController@postSaveProduct')->name('dashboard.products.save');
+  Route::post('products/delete', 'DashboardController@postDeleteProduct')->name('dashboard.products.delete');
 });

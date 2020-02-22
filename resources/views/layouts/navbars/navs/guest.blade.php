@@ -1,6 +1,6 @@
 <nav class="navbar navbar-top navbar-horizontal navbar-expand-md navbar-dark navbar-main p-0">
     <div class="container p-0">
-        <a class="navbar-brand" href="{{ route('home') }}">
+        <a class="navbar-brand" href="/">
             <img src="{{ asset('img/logo.png') }}">
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapse-main"
@@ -12,7 +12,7 @@
             <div class="navbar-collapse-header d-md-none">
                 <div class="row">
                     <div class="col-6 collapse-brand">
-                        <a href="{{ route('home') }}">
+                        <a href="/">
                             <img src="{{ asset('img/logo.png') }}">
                         </a>
                     </div>

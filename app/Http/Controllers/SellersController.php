@@ -20,7 +20,20 @@ class SellersController extends Controller
         $search = null;
 
         $seller = Seller::find($id);
-        $products = Product::where('seller_id', $id)->paginate(9);
+
+        if( request()->has('search')) {
+            $search = request('search');
+            $products = Product::join('sellers', 'sellers.id', '=', 'products.seller_id')
+                ->where('sellers.name', $seller->name)
+                ->where(function($q) use ($search) {
+                    $q->where('products.name', 'like', '%'.$search.'%')
+                    ->orWhere('products.description', 'like', '%'.$search.'%');
+                })
+                ->paginate(9, array('products.id', 'products.name', 'products.cover_image', 'products.description', 'products.unit_price'));
+            $products->appends(['search' => $search]);
+        } else {
+            $products = Product::where('seller_id', $id)->paginate(9);
+        }
 
         return view('sellers.show')
                 ->with('seller', $seller)

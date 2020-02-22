@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Product;
 
+use DB;
 use Illuminate\Http\Request;
 
 class ProductsController extends Controller
@@ -17,9 +18,12 @@ class ProductsController extends Controller
     {
         $search = request('search');
 
-        $products = Product::where(function($q) use ($search) {
-                $q->where('name', 'like', '%'.$search.'%')
-                ->orWhere('description', 'like', '%'.$search.'%');
+        $products = Product::join('sellers', 'sellers.id', '=', 'products.seller_id')
+            ->select( DB::raw('products.*') )
+            ->where(function($q) use ($search) {
+                $q->where('products.name', 'like', '%'.$search.'%')
+                ->orWhere('products.description', 'like', '%'.$search.'%')
+                ->orWhere('sellers.name', 'like', '%'.$search.'%');
             })
             ->paginate(9);
         $products->appends(['search' => $search]);

@@ -45,9 +45,9 @@
         <div class="col-10">
           <div class="row">
             <div class="col-12">
-              <form action="/products?" method="get">
+              <form action="/sellers/{{ $seller->id }}?" method="get">
                 <div class="input-group mb-3">
-                    <input type="text" class="form-control"  placeholder="Search by product name, location, or by brand" name="search" value="<?= $search ?>">
+                    <input type="text" class="form-control"  placeholder="Search by product name, location, or by brand" name="search" value="{{ $search }}">
                     <div class="input-group-append">
                       <button class="btn btn-outline-primary" type="submit">Search</button>
                     </div>
@@ -55,7 +55,17 @@
               </form>
             </div>
           </div>
-          @if(count($products) > 0)
+          @if(count($products) > 0 || $search != null)
+
+            @if($search != null && count($products) == 0)
+                <div class="row mt-3 mb-5">
+                    <div class="col text-center">
+                        <p class="lead">Product not found</p>
+                    </div>
+                </div>
+            @endif
+
+            @if(count($products) > 0)
             <div class="row">
 
               @foreach ($products as $product)
@@ -84,10 +94,11 @@
             <div class="row mt-2">
               {{ $products->links() }}
             </div>
+            @endif
           @else
             <div class="row mt-3 mb-5">
                 <div class="col text-center">
-                    <p class="lead">No Products not found</p>
+                    <p class="lead">No Products found</p>
                 </div>
             </div>
           @endif

@@ -20,7 +20,7 @@ class ProductTableSeeder extends Seeder
         $product->unit_price = 300.00;
         $product->in_stock = 13;
         $product->cover_image = 'handmade-necklace.jpg';
-        $product->category = '';
+        $product->category = 'Accessories';
         $product->save();
 
         $product = new Product;
@@ -30,7 +30,7 @@ class ProductTableSeeder extends Seeder
         $product->unit_price = 350.00;
         $product->in_stock = 23;
         $product->cover_image = 'handmade-bag.jpg';
-        $product->category = '';
+        $product->category = 'Bags';
         $product->save();
 
         $product = new Product;
@@ -40,7 +40,7 @@ class ProductTableSeeder extends Seeder
         $product->unit_price = 330.00;
         $product->in_stock = 33;
         $product->cover_image = 'bracelet.jpg';
-        $product->category = '';
+        $product->category = 'Accessories';
         $product->save();
 
         $product = new Product;
@@ -50,7 +50,7 @@ class ProductTableSeeder extends Seeder
         $product->unit_price = 150.00;
         $product->in_stock = 25;
         $product->cover_image = 'bag.jpg';
-        $product->category = '';
+        $product->category = 'Bags';
         $product->save();
 
         $product = new Product;
@@ -60,7 +60,7 @@ class ProductTableSeeder extends Seeder
         $product->unit_price = 50.00;
         $product->in_stock = 125;
         $product->cover_image = 'fan.jpg';
-        $product->category = '';
+        $product->category = 'Fans';
         $product->save();
 
         $product = new Product;
@@ -70,7 +70,7 @@ class ProductTableSeeder extends Seeder
         $product->unit_price = 50.00;
         $product->in_stock = 125;
         $product->cover_image = 'handicraft.jpg';
-        $product->category = '';
+        $product->category = 'Handicraft';
         $product->save();
 
         $product = new Product;
@@ -80,7 +80,7 @@ class ProductTableSeeder extends Seeder
         $product->unit_price = 50.00;
         $product->in_stock = 125;
         $product->cover_image = 'chocolates.jpg';
-        $product->category = '';
+        $product->category = 'Foods';
         $product->save();
 
         $product = new Product;
@@ -90,7 +90,7 @@ class ProductTableSeeder extends Seeder
         $product->unit_price = 50.00;
         $product->in_stock = 125;
         $product->cover_image = 'coffee.jpg';
-        $product->category = '';
+        $product->category = 'Foods';
         $product->save();
 
         $product = new Product;
@@ -100,7 +100,7 @@ class ProductTableSeeder extends Seeder
         $product->unit_price = 50.00;
         $product->in_stock = 125;
         $product->cover_image = 'cashew-butter.jpg';
-        $product->category = '';
+        $product->category = 'Foods';
         $product->save();
 
         $product = new Product;
@@ -110,7 +110,7 @@ class ProductTableSeeder extends Seeder
         $product->unit_price = 50.00;
         $product->in_stock = 125;
         $product->cover_image = 'handwoven-fabric.jpg';
-        $product->category = '';
+        $product->category = 'Hand Woven';
         $product->save();
 
         $product = new Product;
@@ -120,7 +120,7 @@ class ProductTableSeeder extends Seeder
         $product->unit_price = 500.00;
         $product->in_stock = 20;
         $product->cover_image = 'picnic basket.jpg';
-        $product->category = '';
+        $product->category = 'Basket';
         $product->save();
 
         $product = new Product;
@@ -130,7 +130,7 @@ class ProductTableSeeder extends Seeder
         $product->unit_price = 30.00;
         $product->in_stock = 155;
         $product->cover_image = 'pouch.jpg';
-        $product->category = '';
+        $product->category = 'Pouch';
         $product->save();
 
         $product = new Product;
@@ -140,7 +140,7 @@ class ProductTableSeeder extends Seeder
         $product->unit_price = 250.00;
         $product->in_stock = 45;
         $product->cover_image = 'school-bag.jpg';
-        $product->category = '';
+        $product->category = 'Bag';
         $product->save();
 
         $product = new Product;
@@ -150,7 +150,7 @@ class ProductTableSeeder extends Seeder
         $product->unit_price = 50.00;
         $product->in_stock = 133;
         $product->cover_image = 'slippers.jpg';
-        $product->category = '';
+        $product->category = 'Slippers';
         $product->save();
 
         $product = new Product;
@@ -160,7 +160,7 @@ class ProductTableSeeder extends Seeder
         $product->unit_price = 55.00;
         $product->in_stock = 25;
         $product->cover_image = 'hat.jpg';
-        $product->category = '';
+        $product->category = 'Hats';
         $product->save();
     }
 }

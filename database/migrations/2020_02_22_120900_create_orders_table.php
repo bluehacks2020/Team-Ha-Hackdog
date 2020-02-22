@@ -25,6 +25,7 @@ class CreateOrdersTable extends Migration
             $table->foreign('billing_id')->references('id')->on('addresses');
             $table->double('payment_method');
             $table->double('amount_to_pay');
+            $table->string('delivery_status')->default('For Pickup');
             $table->timestamps();
         });
     }

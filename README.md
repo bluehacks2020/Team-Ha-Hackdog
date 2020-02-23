@@ -2,6 +2,12 @@
 
 An e-commerce web application for indigenous people where-in every product tells a story.
 
+## Team Members
+
+-   [Joeylene Rivera](https://github.com/jorenrui)
+-   [Robert Federico](https://github.com/robertfederico)
+-   [Karl Macadangdang](https://github.com/karlmacz)
+
 ## Getting Started
 
 ### Pre-requisite

@@ -161,7 +161,7 @@
                         },
                         dataType: 'json',
                         success: function(response) {
-                            window.reload();
+                            window.location.reload();
                             $('#loader-modal').modal('hide');
                         },
                         error: function(err) {

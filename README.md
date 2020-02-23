@@ -60,7 +60,7 @@ a. Go to `C:/xampp/apache/conf/extra/httpd-vhosts.conf`. Edit then save.
 
 <VirtualHost *:80>
     DocumentRoot "C:/xampp/htdocs/katubo/public"
-    ServerName katubo.dev
+    ServerName katubo.me
 </VirtualHost>
 ```
 
@@ -70,7 +70,7 @@ b. Open Notepad as **Administrator**. Then Open File: `C:/Windows/System32/drive
 # At the bottom of the file
 
 127.0.0.1 localhost
-127.0.0.1 katubo.dev
+127.0.0.1 katubo.me
 ```
 
 #### 3. Database Configuration <a name="database"></a>
@@ -139,7 +139,7 @@ d After that you're all set! You may now use the dummy accounts.
 
 #### 5. Check the App <a name="check"></a>
 
-a. Open a browser and go to `katubo.dev`. Make sure that both `Apache` and `MySQL` are running on the XAMPP Control Panel.
+a. Open a browser and go to `katubo.me`. Make sure that both `Apache` and `MySQL` are running on the XAMPP Control Panel.
 
 b. Try to login.
 

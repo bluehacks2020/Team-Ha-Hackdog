@@ -1,78 +1,164 @@
-<p align="center"><img src="https://res.cloudinary.com/dtfbvvkyp/image/upload/v1566331377/laravel-logolockup-cmyk-red.svg" width="400"></p>
+# Katubo
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/d/total.svg" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/v/stable.svg" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://poser.pugx.org/laravel/framework/license.svg" alt="License"></a>
-</p>
+An e-commerce web application for indigenous people where-in every product tells a story.
 
-## About Laravel
+## Getting Started
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+### Pre-requisite
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+-   [XAMPP](https://www.apachefriends.org/download.html)
+-   [NPM](https://nodejs.org/en/download/)
+-   [Git / Git Bash](https://git-scm.com/downloads)
+-   [Composer](https://getcomposer.org/download/)
+-   Familiar with mySQL and PHP
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+### Installation
 
-## Learning Laravel
+1. [Clone the Repository](#clone-repo)
+2. [Setting up a Virtual Host](#vhost)
+3. [Database Configuration](#database)
+4. [Populating the Database with some dummy data (optional)](#seeder)
+5. [Check the App](#check)
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+#### 1. Clone the Repository <a name="clone-repo"></a>
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+a. Go to `C:/xampp/htdocs`
 
-## Laravel Sponsors
+```bash
+cd 'C:/xampp/htdocs'
+```
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+b. Clone the Repository
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[British Software Development](https://www.britishsoftware.co)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- [UserInsights](https://userinsights.com)
-- [Fragrantica](https://www.fragrantica.com)
-- [SOFTonSOFA](https://softonsofa.com/)
-- [User10](https://user10.com)
-- [Soumettre.fr](https://soumettre.fr/)
-- [CodeBrisk](https://codebrisk.com)
-- [1Forge](https://1forge.com)
-- [TECPRESSO](https://tecpresso.co.jp/)
-- [Runtime Converter](http://runtimeconverter.com/)
-- [WebL'Agence](https://weblagence.com/)
-- [Invoice Ninja](https://www.invoiceninja.com)
-- [iMi digital](https://www.imi-digital.de/)
-- [Earthlink](https://www.earthlink.ro/)
-- [Steadfast Collective](https://steadfastcollective.com/)
-- [We Are The Robots Inc.](https://watr.mx/)
-- [Understand.io](https://www.understand.io/)
-- [Abdel Elrafa](https://abdelelrafa.com)
-- [Hyper Host](https://hyper.host)
-- [Appoly](https://www.appoly.co.uk)
-- [OP.GG](https://op.gg)
+```bash
+git clone https://github.com/bluehacks2020/Team-Ha-Hackdog.git
+```
 
-## Contributing
+c. Go to the `katubo` directory
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+```bash
+cd 'katubo'
+```
 
-## Code of Conduct
+d. Install Dependencies
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+```bash
+composer install
+```
 
-## Security Vulnerabilities
+#### 2. Setting up a Virtual Host <a name="vhost"></a>
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+a. Go to `C:/xampp/apache/conf/extra/httpd-vhosts.conf`. Edit then save.
 
-## License
+```
+# At the bottom of the file
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+<VirtualHost *:80>
+    DocumentRoot "C:/xampp/htdocs"
+    ServerName localhost
+</VirtualHost>
+
+<VirtualHost *:80>
+    DocumentRoot "C:/xampp/htdocs/katubo/public"
+    ServerName katubo.dev
+</VirtualHost>
+```
+
+b. Open Notepad as **Administrator**. Then Open File: `C:/Windows/System32/drivers/etc/hosts`. Edit then save.
+
+```
+# At the bottom of the file
+
+127.0.0.1 localhost
+127.0.0.1 katubo.dev
+```
+
+#### 3. Database Configuration <a name="database"></a>
+
+a. Run both `Apache` and `mySQL` in the XAMPP Control Panel.
+
+b. Go to `localhost/phpmyadmin` in your browser. Then login and create a database named `katubo`. In the main directory of `katubo`, find `.env.example`. Open it and update the database information below. After that, save it as `.env`.
+
+> **Note**
+>
+> The default credentials for the phpMyAdmin are:
+>
+> username: root
+>
+> password:
+>
+> _You can leave the password blank._
+
+```
+APP_NAME=Katubo
+...
+DB_DATABASE=katubo
+DB_USERNAME=myUsername
+DB_PASSWORD=myPassword
+```
+
+c. Generate the Application Key
+
+```bash
+php artisan key:generate
+```
+
+d. Reset the Database if you have already ran the Database Migration at least once, else proceed to the next step.
+
+```bash
+php artisan migrate:reset
+```
+
+e. Run the Database Migration
+
+```
+php artisan migrate
+```
+
+#### 4. Populating the Database with some dummy data (optional) <a name="seeder"></a>
+
+a. Populate the Database by running the Database Seeder. A dummy data has been provided.
+
+```
+composer dump-autoload
+```
+
+```
+php artisan db:seed
+```
+
+b. Create a symbolic link:
+
+```bash
+php artisan storage:link
+```
+
+c. In the root directory of the repository, go to `public/img/storage`. Copy `products` to `public/storage/`.
+
+d After that you're all set! You may now use the dummy accounts.
+
+#### 5. Check the App <a name="check"></a>
+
+a. Open a browser and go to `katubo.dev`. Make sure that both `Apache` and `MySQL` are running on the XAMPP Control Panel.
+
+b. Try to login.
+
+c. Congrats! You're all set.
+
+### Main Techs
+
+-   HTML, CSS, JavaScript, PHP and MySQL
+-   [Laravel](https://laravel.com/) - The web framework used
+-   [jQuery](https://jquery.com/) - JavaScript library
+-   [Bootstrap](https://getbootstrap.com/) - CSS Framework
+
+### OS Techs
+
+-   [Argon Laravel Dashboard](https://www.creative-tim.com/product/argon-dashboard-laravel) - Frontend Preset for Laravel
+-   [AOS - Animate on Scroll](https://michalsnik.github.io/aos/)
+
+### Citations and Reference
+
+-   [Unsplash](https://unsplash.com/)
+-   [Indigenous people seek markets for products](https://business.inquirer.net/26443/indigenous-people-seek-markets-for-products?fbclid=IwAR2qmna_BXy9hl1cehnIYTVlOa9CTQsBuzdqhCAiQNoLrWTFkmeU1E9LK5U)
+-   [Fast Facts: Indigenous Peoples in the Philippines](https://www.ph.undp.org/content/philippines/en/home/library/democratic_governance/FastFacts-IPs.html?fbclid=IwAR0GcCKcI7lYkrpwSIJknpFo6GzP6jQpeBIBFVEu7qcNyCp96DKxYGbXozg)
